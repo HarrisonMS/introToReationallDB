@@ -7,12 +7,22 @@
   },
   "repository": "https://github.com/LambdaSchool/webdb-i-challenge",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.22.0",
     "knex": "^0.20.13",
+    "morgan": "^1.10.0",
     "pg": "^8.0.2",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
   }
 }
