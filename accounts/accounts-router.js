@@ -2,14 +2,16 @@ const express = require('express')
 const knex = require('../data/dbConfig')
 const router = express.Router()
 
+
 router.get('/v2', async (req, res) => {
-  let page = req.query.page
-  let limit = req.query.limit
-  let accounts = await knex('accounts')
-    .paginate({ page: page, limit: limit })
-    .exec()
+  let page = req.query.page;
+  let limit = req.query.limit;
+  let accounts = await knex('accounts').paginate({page: page, limit: limit}).exec();
   res.status(200).json(accounts)
 })
+
+
+
 
 router.get('/', (req, res) => {
   knex
